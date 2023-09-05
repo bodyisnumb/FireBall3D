@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletMove : MonoBehaviour
@@ -12,4 +13,14 @@ public class BulletMove : MonoBehaviour
         transform.position = startTransform.position;
         myRigidBody.velocity = moveDirection * moveSpeed;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent<Block>(out Block towerBlock))
+        {
+            towerBlock.Break();
+            Destroy(gameObject);
+        }
+    }
+
 }

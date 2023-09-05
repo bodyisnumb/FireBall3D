@@ -67,6 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961361c6b401a4aa7ab7889591afcb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzlePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  cooldown: 0.2
 --- !u!1 &515125838315717118
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +164,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 658d99b4020bb45fa80ecf5b58a840e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,7 +247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 658d99b4020bb45fa80ecf5b58a840e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
