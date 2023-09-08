@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    [SerializeField] private GameState gameState;
     [SerializeField] private Transform muzzlePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float cooldown = 0.2f;
@@ -37,4 +38,9 @@ public class PlayerShoot : MonoBehaviour
         _canShoot = !_canShoot; //true
     }
 
+    public void GameOver()
+    {
+        gameState.OnGameOver?.Invoke();
+        enabled = false;
+    }
 }

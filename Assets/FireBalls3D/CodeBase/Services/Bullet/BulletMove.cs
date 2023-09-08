@@ -21,6 +21,23 @@ public class BulletMove : MonoBehaviour
             towerBlock.Break();
             Destroy(gameObject);
         }
+
+        else if(other.TryGetComponent(out Obstacle obstacle))
+        {
+            Bounce();
+        }
+
+        else if(other.TryGetComponent(out PlayerShoot player))
+        {
+            player.GameOver();
+            Destroy(gameObject);
+        }
     }
+
+    private void Bounce()
+    {
+        myRigidBody.velocity *= -1;
+    }
+
 
 }
